@@ -1,0 +1,9 @@
+*.iml
+.DS_Store
+target/
+.idea/
+.vagrant/
+.tfstate/
+.terraform/
+
+Gemfile.lock
