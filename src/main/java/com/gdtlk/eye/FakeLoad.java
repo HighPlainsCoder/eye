@@ -24,6 +24,7 @@ public class FakeLoad {
 
 		} catch(Exception e) {
             LOG.error("exception caught in main " + e.getClass().getName(),e);
+            System.exit(1);
 		}
     }
 

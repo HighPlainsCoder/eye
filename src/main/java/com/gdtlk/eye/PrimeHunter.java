@@ -6,12 +6,12 @@ import java.util.Comparator;
 
 
 class PrimeHunter {
-	private ArrayList<Integer> primes = new ArrayList(Arrays.asList(2,3,5,7,11,13,17,19,23,29));
-    private Integer wheel = 30; //2*3*5
-    private ArrayList<Integer> offsets = new ArrayList(Arrays.asList(1,7,11,13,17,19,23,29));
-    private int firstPrimeIx = 3; // i.e. 7
-    private int lastPrimeIx = 3;
-    private Integer nextPrimeSquared = 121;
+	private ArrayList<Integer> primes = new ArrayList(Arrays.asList(2,3,5));
+    private Integer wheel = 6; //2*3
+    private ArrayList<Integer> offsets = new ArrayList(Arrays.asList(1,5));
+    private int firstPrimeIx = 2; // i.e. 5
+    private int lastPrimeIx = 2;
+    private Integer topPrimeSquared = 25;
 
     private Integer start = 1*wheel;
 
@@ -20,9 +20,9 @@ class PrimeHunter {
         while (true) {
             for (Integer o : offsets) {
                 Integer candidate = start + o;
-                while (candidate >= nextPrimeSquared) {
+                while (candidate >= topPrimeSquared) {
                     lastPrimeIx++;
-                    nextPrimeSquared = primes.get(lastPrimeIx+1) * primes.get(lastPrimeIx+1);
+                    topPrimeSquared = primes.get(lastPrimeIx+1) * primes.get(lastPrimeIx+1);
                 }
                 boolean prime = check(candidate);
                 if (prime)
@@ -53,7 +53,7 @@ class PrimeHunter {
         offsets.clear();
         offsets.add(1);
 
-        for(int pix=firstPrimeIx;pix<primes.size();++pix) {
+        for(int pix=firstPrimeIx;pix<primes.size() && primes.get(pix)<wheel;++pix) {
             offsets.add(primes.get(pix));
         }
 
