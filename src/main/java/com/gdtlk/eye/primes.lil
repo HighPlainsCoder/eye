@@ -1,0 +1,45 @@
+// Copyright (c) 2017 Craig Reid Ewert
+// Written in LIL
+
+primes = [2,3,5,7,11,13,17,19,23,29];
+mod30s = [1,7,11,13,17,19,23,29];
+thirties = 30;
+lastPrimeIndexToCheck = 3; // when primeIndex reaches this, you are done with this candidate
+int primeIndex;
+modIndex = 0;
+
+
+fun bumpIndices() {
+    modIndex = modIndex + 1;
+    if modIndex >= mod30s.length() {
+        modIndex = 0;
+        thirties = thirties + 30;
+    }
+}
+
+primeIndex = 0;
+loop {
+    print primes(primeIndex);
+    primeIndex = primeIndex + 1;
+    if primeIndex >= primes.length()
+        break;
+}
+
+loop {
+    candidate = thirties + mod30s(modIndex);
+    if candidate > primes(lastPrimeIndexToCheck) * primes(lastPrimeIndexToCheck) {
+        lastPrimeIndexToCheck = lastPrimeIndexToCheck + 1;
+    }
+    primeIndex = 0;
+    primeToDivide = primes(primeIndex);
+    if candidate % primeToDivide == 0 {
+        bumpIndices();
+    } else if primeIndex == lastPrimeIndexToCheck {
+        print candidate;
+        primes.add(candidate);
+        bumpIndices();
+    } else {
+        primeIndex = primeIndex + 1;
+        primeToDivide = primes(primeIndex);
+    }
+}

@@ -5,5 +5,4 @@ target/
 .vagrant/
 .tfstate/
 .terraform/
-
-Gemfile.lock
+.gradle/
