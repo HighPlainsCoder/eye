@@ -1,11 +1,11 @@
-package org.eeewert.primes;
+package com.gdtlk.eye;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
 
-class PrimeHunter {
+class new ArrayList(Arrays.asList(2,3,5))new ArrayList(Arrays.asList(2,3,5))PrimeHunter {
 	private ArrayList<Integer> primes = new ArrayList(Arrays.asList(2,3,5));
     private Integer wheel = 6; //2*3
     private ArrayList<Integer> offsets = new ArrayList(Arrays.asList(1,5));

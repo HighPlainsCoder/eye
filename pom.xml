@@ -5,26 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sovrn.dp</groupId>
-    <artifactId>bias</artifactId>
+    <artifactId>primes</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <description>
-        Test of write capability from AWS to Dallas Aerospike
+        Just an example to harden the guidelines
     </description>
 
-    <repositories>
-        <repository>
-            <id>lijit-nexus</id>
-            <url>http://nexus1.dfw2.lijit.com/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
+    <!-- TODO: place repository section here -->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -49,8 +37,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.6.0</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.11</source>
+                    <target>1.11</target>
                     <encoding>UTF-8</encoding>
                     <forceJavacCompilerUse>true</forceJavacCompilerUse>
                 </configuration>
@@ -75,7 +63,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.sovrn.dp.bias.Bias</mainClass>
+                            <mainClass>com.gdtlk.eye.Conductor</mainClass>
                         </manifest>
                     </archive>
                     <finalName>${project.name}</finalName>

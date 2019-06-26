@@ -14,13 +14,13 @@ import cucumber.api.DataTable;
 import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.*;
 
-import com.sovrn.dp.bias.Bias;
+import com.sovrn.dp.bias.Eye;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
 public class CucumberSteps {
-    private static final Logger logger = LogManager.getLogger(Bias.class);
+    private static final Logger logger = LogManager.getLogger(Eye.class);
 
     Set<String> domains = new HashSet<>();
 
@@ -42,7 +42,7 @@ public class CucumberSteps {
         logger.info("we call the bias program");
         List<String> lastargs = (List<String>)Arrays.asList(args.split("[ \t\n]+"));
 
-        Bias.main(lastargs.toArray(new String[lastargs.size()]));
+        Eye.main(lastargs.toArray(new String[lastargs.size()]));
     }
 
 
