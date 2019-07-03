@@ -1,0 +1,16 @@
+{ "type": "record", "name": "Wheel", "namespace": "com.gdtlk.primes",
+  "fields": [ 
+    { "name": "owner", "type": {"type":"string","avro.java.string":"String"}},
+    { "name": "timestamp",  "type": "long"},
+    { "name": "calctime",  "type": ["null","double"]},
+    { "name": "offsets",  "type": {"type": "array", "items": {"type":"long"}}},
+
+    { "name": "parameters", "type": ["null", {"type":"record", "name":"WheelParams","fields":[
+      {"name": "mostprime", "type": ["null","long"],"default": null},
+      {"name": "verified", "type": ["null","boolean"], "default": null},
+      {"name": "mostprimeindex", "type": ["null","int"], "default": null}
+    ]}], "default": null},
+
+    { "name": "settings","type": ["null",{"type":"map","values":{"type":"string","avro.java.string":"String"}}],"default":null}
+  ]
+}
