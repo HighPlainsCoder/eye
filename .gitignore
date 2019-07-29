@@ -6,3 +6,5 @@ target/
 .tfstate/
 .terraform/
 .gradle/
+gradle/
+gradlew
