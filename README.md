@@ -1,5 +1,13 @@
-# Eye
-Image Processor
+# Primes
+Pointless program to generate primes in a distributed, cooperating, multiprocess system.
+
+
+
+https://primes.utm.edu/lists/small/10000.txt
+
+http://compoasso.free.fr/primelistweb/page/prime/liste_online_en.php
+
+
 
 
 ### Architectural tenets to address

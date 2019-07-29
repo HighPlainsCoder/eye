@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 
-class new ArrayList(Arrays.asList(2,3,5))new ArrayList(Arrays.asList(2,3,5))PrimeHunter {
+class PrimeHunter {
 	private ArrayList<Integer> primes = new ArrayList(Arrays.asList(2,3,5));
     private Integer wheel = 6; //2*3
     private ArrayList<Integer> offsets = new ArrayList(Arrays.asList(1,5));
