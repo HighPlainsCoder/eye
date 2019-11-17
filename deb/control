@@ -1,6 +1,0 @@
-Package: eye
-Version: [[version]]
-Priority: optional
-Architecture: all
-Maintainer: ce@gdtlk.com
-Description: Image Histogram

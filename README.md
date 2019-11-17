@@ -1,16 +1,8 @@
-# Primes
-Pointless program to generate primes in a distributed, cooperating, multiprocess system.
+# Eye
+Utility to process pictures
 
 
-
-https://primes.utm.edu/lists/small/10000.txt
-
-http://compoasso.free.fr/primelistweb/page/prime/liste_online_en.php
-
-
-
-
-### Architectural tenets to address
+## Architectural tenets to address
 
 * Build in anticipation of failure.
   * TODO: dag will record successes, and adjust params to include all data since last success.
@@ -35,35 +27,8 @@ http://compoasso.free.fr/primelistweb/page/prime/liste_online_en.php
 
 
 
-## Testing
 
-We set up a test environment using `docker-compose`
-
-```bash
-docker-compose up -d
-```
-
-Once this all comes up, the following command creates the sourcedata.ad_activity table and populates it with 
-some initial data from `./hive/data`
-```bash
-docker exec -it bias_hive-server_1 sh -c /staging/setup_hive_tables.sh
-```
-
-The query `SELECT count(1) from sourcedata.ad_activity;` should return 306 rows.
-
-To get a hive prompt, run this command: 
-
-```bash
-docker exec -it bias_hive-server_1 hive
-```
-
-Then, to shut it all down
-```bash
-docker-compose down
-```
-
-
-## notes
+## Notes
 
 #### find dependencies, for removing dependencies
     mvn dependency:tree -Dverbose -Dincludes=log4j:log4j

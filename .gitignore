@@ -7,4 +7,4 @@ target/
 .terraform/
 .gradle/
 gradle/
-gradlew
+
