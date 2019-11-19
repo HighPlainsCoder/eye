@@ -2,7 +2,7 @@
  * Pointless class just demonstrating various techniques
  */
 
-package com.gdtlk.template;
+package com.booflamoo.template;
 
 
 import org.apache.avro.io.*;

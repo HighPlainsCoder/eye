@@ -1,11 +1,11 @@
-/** Eye
+/** ColorHistogram
  * Get a file or directory name
  * Open picture files
  * Count pixels grouped by color
  * Histogram
  */
 
-package com.gdtlk.eye;
+package com.booflamoo.eye;
 
 import org.apache.commons.cli.*;
 import org.apache.logging.log4j.LogManager;
@@ -20,8 +20,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.lang.System.exit;
 
-public class Eye  {
-    private static final Logger logger = LogManager.getLogger(Eye.class);
+public class ColorHistogram  {
+    private static final Logger logger = LogManager.getLogger(ColorHistogram.class);
 
 
     //TODO find useful default values for these threadcounts
@@ -43,14 +43,14 @@ public class Eye  {
 
 
     public static void main(String args[]) {
-        Eye b=null;
+        ColorHistogram b=null;
         try {
             setupShutdownHook();
 
             if (!parseArgs(args))
                 return;
 
-            b = new Eye();
+            b = new ColorHistogram();
             b.process();
         } catch (Exception e) {
             logger.error("fatal error {}" , e.getLocalizedMessage());
@@ -102,7 +102,7 @@ public class Eye  {
             HelpFormatter formatter = new HelpFormatter();
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
-            String syntax = Eye.class.getName() + " [<options>]";
+            String syntax = ColorHistogram.class.getName() + " [<options>]";
             formatter.printHelp(pw, 100, syntax, "options:", options, 0, 2, null);
             sw.append("\nThere are also several rare options, set as system properties like -Daero.host=xxx");
             sw.append("\nScan the source code for those, or look into the wiki");
@@ -131,7 +131,7 @@ public class Eye  {
 
         // TODO: set up initial threads/processes
 
-        Eye.theReaderQisCompleted.set(true);
+        ColorHistogram.theReaderQisCompleted.set(true);
         waitForWorkersToFinish();
 
         Metrics.addStat("TotalTime",new Date().getTime() - startTime);
@@ -145,7 +145,7 @@ public class Eye  {
      * with supporting variables as seen.
      */
     void waitForWorkersToFinish() {
-        while (!readerQ.isEmpty() && !Eye.theReaderQisCompleted.get() &&  !Eye.shutdownIsHappening.get()) {
+        while (!readerQ.isEmpty() && !ColorHistogram.theReaderQisCompleted.get() &&  !ColorHistogram.shutdownIsHappening.get()) {
             try {
                 Thread.sleep(1000);//millis
             } catch (InterruptedException e) {
@@ -153,7 +153,7 @@ public class Eye  {
             }
         }
 
-        while (readerCount.get()>0 && !Eye.shutdownIsHappening.get()) {
+        while (readerCount.get()>0 && !ColorHistogram.shutdownIsHappening.get()) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -161,9 +161,9 @@ public class Eye  {
             }
         }
 
-        Eye.theWriterQisCompleted.set(true);
+        ColorHistogram.theWriterQisCompleted.set(true);
 
-        while (writerCount.get()>0 && !Eye.shutdownIsHappening.get()) {
+        while (writerCount.get()>0 && !ColorHistogram.shutdownIsHappening.get()) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
