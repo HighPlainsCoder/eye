@@ -22,13 +22,9 @@ Actual rules at  https://www.freecodecamp.org/news/projecteuler100-coding-challe
 
 I made(will make) a subproject for each challenge.
 
-Since each one is a small program, I made a tiny gradle file for them to share. By rights I could use the java compiler & execute directly, but gradle is what I use in my day job and I like to keep fresh.
+Since each one is a small program,  I use the java compiler & execute directly.
 
-Execute each challenge like this (assumes you have gradle around)
-    gradle assemble && java -cp build/libs/euler.jar One 
-    
-or, if you have Java 11 or later. just compile and go:
+Execute each challenge like this (probably needs java 11 or better)
+
     java One.java
-    
-(After just seconds of reflection) Hell, lets make that the one true way.  Pruning all gradle now...
 
