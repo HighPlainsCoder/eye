@@ -13,12 +13,13 @@
 
 ```
 
-##Lessons learned:
+##Lessons learned
+
 * Apparently, some people say "difference between A and B" and dont mean "A - B"; they mean "B - A", or maybe "|A - B|"
 * how long as it been since I used |expression| to means absolute value? Too long; all the "or" partisans have hijacked that symbol.
 
 
-* projecteuler.net says:
+## projecteuler.net says:
 
 ```
 Congratulations, the answer you gave to problem 6 is correct.

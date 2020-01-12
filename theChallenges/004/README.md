@@ -1,4 +1,4 @@
-Euler challenge 4
+# Euler challenge 4
 
 ```
 A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
@@ -6,7 +6,7 @@ A palindromic number reads the same both ways. The largest palindrome made from 
 Find the largest palindrome made from the product of two 3-digit numbers.
 ```
 
-Lessons learned:
+## Lessons learned:
 * math helps.
   * I mathed that I could best search from the top, diagonally
   * then that I only had to search the top 1/2 of each diagonal
@@ -15,7 +15,7 @@ Lessons learned:
 * Java is not C++.  I first made my loops in the C++ syntax (even though that is 10 years behind me)
 * math isnt fully needed.  This algorithm continues for a bit after it finds a palindrome, in case it finds another, larger one. Because Im didnt list all the candidates in 100% descending order, just mostly.  
 
-* projecteuler.net says:
+## projecteuler.net says:
 
 ```
 Congratulations, the answer you gave to problem 4 is correct.
