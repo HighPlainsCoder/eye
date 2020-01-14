@@ -1,4 +1,4 @@
-# Euler challenge 7
+# Euler challenge 10
 
 ``` 
 The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
