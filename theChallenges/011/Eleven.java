@@ -73,53 +73,53 @@ public class Eleven {
     public static void main(String[] args) {
         int largest = 0;
         int x, y, i;
-        int sum;
+        int product;
 
         // horizontal
         for (x=0;x<gwidth-sumlength;++x) {
             for (y=0;y<gheight;++y) {
-                sum=1;
+                product=1;
                 for (i=0;i<sumlength;++i) {
-                    sum*= get(x+i,y);
+                    product*= get(x+i,y);
                 }
-                if (sum>largest)
-                    largest=sum;
+                if (product>largest)
+                    largest=product;
             }
         }
 
         // vertical
         for (x=0;x<gwidth;++x) {
             for (y=0;y<gheight-sumlength;++y) {
-                sum=1;
+                product=1;
                 for (i=0;i<sumlength;++i) {
-                    sum*= get(x,y+i);
+                    product*= get(x,y+i);
                 }
-                if (sum>largest)
-                    largest=sum;
+                if (product>largest)
+                    largest=product;
             }
         }
 
         // downright
         for (x=0;x<gwidth-sumlength;++x) {
             for (y=0;y<gheight-sumlength;++y) {
-                sum=1;
+                product=1;
                 for (i=0;i<sumlength;++i) {
-                    sum*= get(x+i,y+i);
+                    product*= get(x+i,y+i);
                 }
-                if (sum>largest)
-                    largest=sum;
+                if (product>largest)
+                    largest=product;
             }
         }
 
         // downleft
         for (x=sumlength;x<gwidth;++x) {
             for (y=0;y<gheight-sumlength;++y) {
-                sum=1;
+                product=1;
                 for (i=0;i<sumlength;++i) {
-                    sum*= get(x-i,y+i);
+                    product*= get(x-i,y+i);
                 }
-                if (sum>largest)
-                    largest=sum;
+                if (product>largest)
+                    largest=product;
             }
         }
 
