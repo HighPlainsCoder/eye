@@ -105,7 +105,9 @@ Work out the first ten digits of the sum of the following one-hundred 50-digit n
 ```    
 
 ## Lessons learned
-
+* if you only need part of the output, you only need part of the input
+* get more than you think you need, just in case you misscounted
+* likewise, check more than you think you must, in case you misscount there, too.
 
 
 ## projecteuler.net says
