@@ -1,15 +1,14 @@
 # Euler challenge 15
 
-``` 
 
 
-Starting in the top left corner of a 2×2 grid, and only being able to move to the right and down, there are exactly 6 routes to the bottom right corner.
-           
-    ![hotlinked right from projecteuler.net; forgive me](https://projecteuler.net/project/images/p015.png)
 
-How many such routes are there through a 20×20 grid?
+>Starting in the top left corner of a 2×2 grid, and only being able to move to the right and down, there are exactly 6 routes to the bottom right corner.
+>           
+>![hotlinked right from projecteuler.net; forgive me](https://projecteuler.net/project/images/p015.png)
+>
+>How many such routes are there through a 20×20 grid?
 
-```
 
 ## Lessons learned
 * math can save you programming as much as programming can save you math
@@ -27,10 +26,10 @@ through long, but I havent used BigInteger in a while (14 billion years), so I c
 
 ## projecteuler.net says
 
-```
-Congratulations, the answer you gave to problem 15 is correct.
 
-You are the 177137th person to have solved this problem.
+>Congratulations, the answer you gave to problem 15 is correct.
+>
+>You are the 177137th person to have solved this problem.
+>
+>This problem had a difficulty rating of 5%
 
-This problem had a difficulty rating of 5%
-```
