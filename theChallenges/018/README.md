@@ -1,4 +1,4 @@
-# Euler challenge 17
+# Euler challenge 18
 
 
 
