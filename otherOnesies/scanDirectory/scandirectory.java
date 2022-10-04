@@ -67,3 +67,9 @@ for filename in fileset:
             print cmd , os.system( cmd )
 
  */
+
+class onesie {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
